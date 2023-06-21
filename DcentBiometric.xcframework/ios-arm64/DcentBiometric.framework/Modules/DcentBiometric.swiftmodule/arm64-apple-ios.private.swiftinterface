@@ -1,0 +1,593 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DcentBiometric
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import BigInt
+import CommonCrypto
+import CommonCrypto.CommonCryptor
+import CoreBluetooth
+@_exported import DcentBiometric
+import Foundation
+import RLPSwift
+import Swift
+import SwiftDate
+import SwiftProtobuf
+import UIKit
+import XCGLogger
+import _Concurrency
+import _StringProcessing
+public class UnionTransaction {
+  public var sigHash: Swift.String?
+  public var key: Swift.String?
+  public var fee: Swift.String?
+  public var nonce: Swift.String?
+  public var decimals: Swift.UInt32?
+  public var symbol: Swift.String?
+  public var optionParam: Swift.String?
+  public init(sigHash: Swift.String?, key: Swift.String?, fee: Swift.String?, nonce: Swift.String? = nil, decimals: Swift.UInt32?, symbol: Swift.String?, optionParam: Swift.String?)
+  @objc deinit
+}
+public enum KlaytnType : Swift.UInt8 {
+  case VALUE_TRANSFER
+  case FEE_DELEGATED_VALUE_TRANSFER
+  case FEE_DELEGATED_VALUE_TRANSFER_WITH_RATIO
+  case VALUE_TRANSFER_MEMO
+  case FEE_DELEGATED_VALUE_TRANSFER_MEMO
+  case FEE_DELEGATED_VALUE_TRANSFER_MEMO_WITH_RATIO
+  case SMART_CONTRACT_DEPLOY
+  case FEE_DELEGATED_SMART_CONTRACT_DEPLOY
+  case FEE_DELEGATED_SMART_CONTRACT_DEPLOY_WITH_RATIO
+  case SMART_CONTRACT_EXECUTION
+  case FEE_DELEGATED_SMART_CONTRACT_EXECUTION
+  case FEE_DELEGATED_SMART_CONTRACT_EXECUTION_WITH_RATIO
+  case CANCEL
+  case FEE_DELEGATED_CANCEL
+  case FEE_DELEGATED_CANCEL_WITH_RATIO
+  case FEE_PAYER
+  case LEGACY
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public class CRC20TokenTransaction : DcentBiometric.ConfluxTransaction {
+  public var tokenName: Swift.String
+  public var contractAddress: Swift.String
+  public var toAddress: Swift.String
+  public var decimals: Swift.String
+  public var value: Swift.String
+  public var tokenSymbol: Swift.String
+  public init(nonce: Swift.String, gasPrice: Swift.String, gas: Swift.String, to: Swift.String, amount: Swift.String, storageLimit: Swift.String, epochHeight: Swift.String, chainId: Swift.String, data: Swift.String = "", addressPath: Swift.String, tokenName: Swift.String, contractAddress: Swift.String, toAddress: Swift.String, decimals: Swift.String, value: Swift.String, tokenSymbol: Swift.String)
+  @objc deinit
+}
+public class BinanceTransaction {
+  public var std_sign_doc: Swift.String?
+  public var key: Swift.String?
+  public var fee: Swift.String?
+  public init(std_sign_doc: Swift.String?, key: Swift.String?, fee: Swift.String?)
+  @objc deinit
+}
+public class SyncAccount : DcentBiometric.Account {
+  public var balance: Swift.String
+  public init?(coinGroup: Swift.String, coinName: Swift.String, label: Swift.String, addressPath: Swift.String, balance: Swift.String)
+  @objc deinit
+}
+extension DcentBiometric.RLPType {
+  public func rlpEncodedData() throws -> Foundation.Data?
+}
+extension Foundation.Data {
+  public func removeLeadingZero() throws -> Foundation.Data
+}
+extension Swift.String {
+  public func toRLPType() throws -> DcentBiometric.RLPElement
+}
+extension Swift.Int {
+  public func toRLPType() throws -> DcentBiometric.RLPElement
+}
+@objc public class RLPElement : ObjectiveC.NSObject, DcentBiometric.RLPType {
+  public var bytes: Foundation.Data
+  public init(bytes: Foundation.Data)
+  @objc deinit
+}
+@objc public class RLPList : ObjectiveC.NSObject, DcentBiometric.RLPType {
+  public var list: [DcentBiometric.RLPType]
+  public init(list: [DcentBiometric.RLPType])
+  @objc deinit
+}
+public protocol RLPType {
+}
+extension Swift.Int {
+  public func toData() -> Foundation.Data
+  public func toMinimalData() -> Foundation.Data
+}
+public enum BtcTxtype : Swift.Int {
+  case p2Pkh
+  case p2Pk
+  case p2Sh
+  case multisig
+  case p2Wpkh
+  case p2Wsh
+  case change
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class BitcoinTransaction {
+  public var version: Swift.UInt32
+  public var input: [DcentBiometric.UnspentTransactionOutput]
+  public var output: [DcentBiometric.TransactionOutput]
+  public var locktime: Swift.UInt32
+  public var optionParam: Swift.String?
+  public init(version: Swift.UInt32, input: [DcentBiometric.UnspentTransactionOutput], output: [DcentBiometric.TransactionOutput], locktime: Swift.UInt32, optionParam: Swift.String? = nil)
+  @objc deinit
+}
+public class UnspentTransactionOutput {
+  public var prev_tx: Swift.String
+  public var utxo_idx: Swift.UInt32
+  public var type: DcentBiometric.BtcTxtype
+  public var key: Swift.String
+  public init()
+  @objc deinit
+}
+public class TransactionOutput {
+  public var value: Swift.UInt64
+  public var to: [Swift.String]
+  public var type: DcentBiometric.BtcTxtype
+  public init()
+  @objc deinit
+}
+public class SolanaTransaction {
+  public var key: Swift.String?
+  public var sigHash: Swift.String?
+  public var fee: Swift.String?
+  public var symbol: Swift.String?
+  public var decimals: Swift.UInt32?
+  public var optionParam: Swift.String?
+  public init(key: Swift.String?, sigHash: Swift.String?, fee: Swift.String?, symbol: Swift.String?, decimals: Swift.UInt32?, optionParam: Swift.String?)
+  @objc deinit
+}
+public protocol DcentBLEManagerDelegate {
+  func dcentBleManager(didUpdate status: DcentBiometric.DcentBleManagerState)
+  func dcentBleManager(didDiscover device: DcentBiometric.BleDeviceInfo)
+  func dcentBleManager(didConnect device: DcentBiometric.BleDeviceInfo)
+  func dcentBleManager(didDisconnect device: DcentBiometric.BleDeviceInfo?)
+  func dcentBleManager(didFailToConnect device: DcentBiometric.BleDeviceInfo?)
+}
+public enum DcentBleManagerState : Swift.Int {
+  case unknown
+  case resetting
+  case unsupported
+  case unauthorized
+  case poweredOff
+  case poweredOn
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class TronTransaction {
+  public var txData: Swift.String?
+  public var key: Swift.String?
+  public var fee: Swift.String?
+  public init(txData: Swift.String?, key: Swift.String?, fee: Swift.String?)
+  @objc deinit
+}
+extension Swift.String {
+  public func dcentUnitConverter(decimal: Swift.Int, radix: Swift.Int? = 16) throws -> Swift.String?
+}
+public class XrpTransactionWithUnsigedTx {
+  public var addressPath: Swift.String
+  public var unsigned: Swift.String
+  public init(addressPath: Swift.String, unsigned: Swift.String)
+  @objc deinit
+}
+public class ConfluxTransaction {
+  public var nonce: Swift.String
+  public var gasPrice: Swift.String
+  public var gas: Swift.String
+  public var to: Swift.String
+  public var amount: Swift.String
+  public var storageLimit: Swift.String
+  public var epochHeight: Swift.String
+  public var data: Swift.String
+  public var chainId: Swift.String
+  public var addressPath: Swift.String
+  public init(nonce: Swift.String, gasPrice: Swift.String, gas: Swift.String, to: Swift.String, amount: Swift.String, storageLimit: Swift.String, epochHeight: Swift.String, chainId: Swift.String, data: Swift.String = "", addressPath: Swift.String)
+  @objc deinit
+}
+public enum ErrorInGeneral : Swift.Int {
+  case DeviceNoData
+  case DeviceNotConnect
+  case ServerNoResponse
+  case ServerResponseWithFail
+  case ServerResponseInvalidResult
+  case UserCanceled
+  case TXNotEnoughAccountBalance
+  case TXNotExistBinaryFromDongle
+  case TXParameterError
+  case DeviceInvalidFormat
+  case DeviceErrorResponse
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class CosmosTransaction : DcentBiometric.UnionTransaction {
+  override public init(sigHash: Swift.String?, key: Swift.String?, fee: Swift.String?, nonce: Swift.String? = nil, decimals: Swift.UInt32?, symbol: Swift.String?, optionParam: Swift.String?)
+  public static func getCosmosDecimal(coinType: DcentBiometric.CoinType) -> Swift.Int
+  @objc deinit
+}
+public class MessageSign {
+  public var message: Swift.String
+  public var key: Swift.String
+  public init(message: Swift.String, key: Swift.String)
+  @objc deinit
+}
+public class EthereumTransaction {
+  public var addressPath: Swift.String
+  public var nonce: Swift.String
+  public var to: Swift.String
+  public var amount: Swift.String
+  public var gasLimit: Swift.String
+  public var gasPrice: Swift.String
+  public var data: Swift.String
+  public var chainId: Swift.String
+  public var symbol: Swift.String?
+  public var txType: Swift.String?
+  public var accessList: Swift.String?
+  public var maxPriorityFpg: Swift.String?
+  public var maxFeePerGas: Swift.String?
+  public init(addressPath: Swift.String, nonce: Swift.String, to: Swift.String, amount: Swift.String, gasLimit: Swift.String, gasPrice: Swift.String, data: Swift.String = "", chainId: Swift.String = "0", symbol: Swift.String? = nil, txType: Swift.String? = nil, accessList: Swift.String? = nil, maxPriorityFpg: Swift.String? = nil, maxFeePerGas: Swift.String? = nil)
+  @objc deinit
+}
+public class Account {
+  public var coinGroup: Swift.String
+  public var coinName: Swift.String
+  public var label: Swift.String
+  public var addressPath: Swift.String
+  public init?(coinGroup: Swift.String, coinName: Swift.String, label: Swift.String, addressPath: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class NearTransaction : DcentBiometric.UnionTransaction {
+  override public init(sigHash: Swift.String?, key: Swift.String?, fee: Swift.String?, nonce: Swift.String? = nil, decimals: Swift.UInt32?, symbol: Swift.String?, optionParam: Swift.String?)
+  @objc deinit
+}
+public class TokenTransaction : DcentBiometric.EthereumTransaction {
+  public var tokenName: Swift.String
+  public var contractAddress: Swift.String
+  public var decimals: Swift.String
+  public var tokenSymbol: Swift.String
+  public init(addressPath: Swift.String, nonce: Swift.String, to: Swift.String, amount: Swift.String, gasLimit: Swift.String, gasPrice: Swift.String, data: Swift.String = "", symbol: Swift.String? = nil, tokenName: Swift.String, contractAddress: Swift.String, decimals: Swift.String, tokenSymbol: Swift.String)
+  @objc deinit
+}
+public let logger: XCGLogger.XCGLogger
+public typealias GeneralResultHandler = (_ result: Swift.Bool) -> Swift.Void
+public typealias GetAccountInfoHandler = (_ result: Swift.Bool, _ accountInfos: [DcentBiometric.Account]) -> Swift.Void
+public typealias StringValueHandler = (_ result: Swift.Bool, _ value: Swift.String) -> Swift.Void
+public typealias StringStringValueHandler = (_ result: Swift.Bool, _ value1: Swift.String, _ value2: Swift.String) -> Swift.Void
+public typealias SSSSValueHandler = (_ result: Swift.Bool, _ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String, _ value3: Swift.String) -> Swift.Void
+public typealias DictionaryValueHandler = (_ result: Swift.Bool, _ value1: [Swift.String : Swift.String]) -> Swift.Void
+public class DcentManager {
+  public var delegate: DcentBiometric.DcentBLEManagerDelegate? {
+    get
+    set
+  }
+  public init()
+  public func searchDeviceStart()
+  public func searchDeviceStop()
+  public func getDeviceList() -> [DcentBiometric.BleDeviceInfo]
+  public func connectDevice(to device: DcentBiometric.BleDeviceInfo)
+  public func disconnectDevice(from device: DcentBiometric.BleDeviceInfo)
+  public func connectedDevice() -> DcentBiometric.BleDeviceInfo?
+  public func getDeviceInfo() -> DcentBiometric.DeviceInfo?
+  public func setDeviceLabel(newLabel: Swift.String, setLabelHandler: @escaping DcentBiometric.GeneralResultHandler)
+  public func syncAccount(account: DcentBiometric.SyncAccount, syncAccountHandler: @escaping DcentBiometric.GeneralResultHandler)
+  public func getAccountInfo(accountInfoHandler: @escaping DcentBiometric.GetAccountInfoHandler)
+  public func requestExtractPublicKey(bip32Name: Swift.String = "Bitcoin seed", KeyPath: Swift.String, extractPublicKeyHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getAddress(coinType: DcentBiometric.CoinType, addressPath: Swift.String, addressHandler: @escaping DcentBiometric.StringStringValueHandler)
+  public func getBitcoinSignedTransaction(coinType: DcentBiometric.CoinType, bitcoinTransaction: DcentBiometric.BitcoinTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getTronSignedTransaction(coinType: DcentBiometric.CoinType, tronTransaction: DcentBiometric.TronTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getBinanceSignedTransaction(coinType: DcentBiometric.CoinType, binanceTransaction: DcentBiometric.BinanceTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getStellarSignedTransaction(coinType: DcentBiometric.CoinType, stellarTransaction: DcentBiometric.StellarTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getHederaSignedTransaction(coinType: DcentBiometric.CoinType, hederaTransaction: DcentBiometric.HederaTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getConfluxSignedTransaction(coinType: DcentBiometric.CoinType, confluxTransaction: DcentBiometric.ConfluxTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getStacksSignedTransaction(coinType: DcentBiometric.CoinType, stacksTransaction: DcentBiometric.StacksTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getSolanaSignedTransaction(coinType: DcentBiometric.CoinType, solanaTransaction: DcentBiometric.SolanaTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getPolkadotSignedTransaction(coinType: DcentBiometric.CoinType, polkadotTransaction: DcentBiometric.PolkadotTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getCosmosSignedTransaction(coinType: DcentBiometric.CoinType, cosmosTransaction: DcentBiometric.CosmosTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getTezosSignedTransaction(coinType: DcentBiometric.CoinType, tezosTransaction: DcentBiometric.TezosTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getVechainSignedTransaction(coinType: DcentBiometric.CoinType, vechainTransaction: DcentBiometric.VechainTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getNearSignedTransaction(coinType: DcentBiometric.CoinType, nearTransaction: DcentBiometric.NearTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getHavahSignedTransaction(coinType: DcentBiometric.CoinType, havahTransaction: DcentBiometric.HavahTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getCardanoSignedTransaction(coinType: DcentBiometric.CoinType, cardanoTransaction: DcentBiometric.CardanoTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getEthereumSignedTransaction(coinType: DcentBiometric.CoinType, ethereumTransaction: DcentBiometric.EthereumTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getEthereumSignedTypedTransaction(coinType: DcentBiometric.CoinType, ethereumTransaction: DcentBiometric.EthereumTransaction, signHandler: @escaping DcentBiometric.DictionaryValueHandler)
+  public func getTokenSignedTransaction(coinType: DcentBiometric.CoinType, tokenTransaction: DcentBiometric.TokenTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getCRC20TokenSignedTransaction(coinType: DcentBiometric.CoinType, tokenTransaction: DcentBiometric.CRC20TokenTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getXrpSignedTransaction(coinType: DcentBiometric.CoinType, xrpTransaction: DcentBiometric.XrpTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getXrpSignedTransactionWithUnsignedTx(coinType: DcentBiometric.CoinType?, xrpTransaction: DcentBiometric.XrpTransactionWithUnsigedTx, signHandler: @escaping DcentBiometric.SSSSValueHandler)
+  public func getKlaytnSignedTransaction(coinType: DcentBiometric.CoinType, klaytnTransaction: DcentBiometric.KlaytnTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getKlaytnBasedTokenTransaction(coinType: DcentBiometric.CoinType, tokenTransaction: DcentBiometric.KlaytnTokenTransaction, signHandler: @escaping DcentBiometric.StringValueHandler)
+  public func getMessageSign(coinType: DcentBiometric.CoinType?, messageSign: DcentBiometric.MessageSign, isFull: Swift.Bool = false, signHandler: @escaping DcentBiometric.StringStringValueHandler)
+  @objc deinit
+}
+public class CardanoTransaction {
+  public var unsigned: Swift.String?
+  public var key: Swift.String?
+  public init(unsigned: Swift.String?, key: Swift.String?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class HavahTransaction : DcentBiometric.UnionTransaction {
+  override public init(sigHash: Swift.String?, key: Swift.String?, fee: Swift.String?, nonce: Swift.String? = nil, decimals: Swift.UInt32?, symbol: Swift.String?, optionParam: Swift.String?)
+  @objc deinit
+}
+public enum CoinType : Swift.String, Swift.Codable {
+  case BTC_SEGWIT
+  case BITCOIN
+  case ETHEREUM
+  case ERC20
+  case ERC721
+  case RSK
+  case RRC20
+  case XRP
+  case MONACOIN
+  case LTC_SEGWIT
+  case LITECOIN
+  case BITCOINCASH
+  case BCH_ABC
+  case DASH
+  case BITCOIN_GOLD
+  case ZCASH
+  case KLAYTN
+  case KLAYTN_ERC20
+  case DGB_SEGWIT
+  case DIGIBYTE
+  case RAVENCOIN
+  case BINANCE
+  case BEP2
+  case STELLAR
+  case ETH_CLASSIC
+  case ETC_ERC20
+  case TRON
+  case TRC_TOKEN
+  case BITCOIN_SV
+  case DOGECOIN
+  case LUNIVERSE
+  case LUNIVERSE_TKN
+  case XDC
+  case XRC20
+  case BSC
+  case BEP20
+  case CARDANO
+  case POLYGON
+  case POLYGON_ERC20
+  case CHAN
+  case CH20
+  case HEDERA
+  case HEDERA_HTS
+  case HORIZEN
+  case STACKS
+  case ECASH
+  case SOLANA
+  case XRP_TA
+  case SIP010
+  case SPL_TOKEN
+  case CONFLUX
+  case CFX_CRC20
+  case POLKADOT
+  case STELLAR_TA
+  case COSMOS
+  case TEZOS
+  case XTZ_FA
+  case VECHAIN
+  case VECHAIN_ERC20
+  case NEAR
+  case NEAR_TOKEN
+  case COREUM
+  case HAVAH
+  case HAVAH_HSP20
+  case RIPPLE_UNSIGNED
+  case XRP_UNSIGNED_TESTNET
+  case BTC_SEGWIT_TESTNET
+  case BTC_TESTNET
+  case ETH_KOVAN
+  case ERC20_KOVAN
+  case RSK_TESTNET
+  case RRC20_TESTNET
+  case XRP_TESTNET
+  case MONA_TESTNET
+  case LTC_SEGWIT_TESTNET
+  case LITE_TESTNET
+  case BCH_TESTNET
+  case DASH_TESTNET
+  case BTG_TESTNET
+  case ZCASH_TESTNET
+  case KLAYTN_TESTNET
+  case KRC20_TESTNET
+  case DGB_SEGWIT_TESTNET
+  case DIGIBYTE_TESTNET
+  case RVN_TESTNET
+  case BNB_TESTNET
+  case BEP2_TESTNET
+  case XLM_TESTNET
+  case TRX_TESTNET
+  case TRC_TESTNET
+  case ETH_RINKEBY
+  case ERC20_RINKEBY
+  case ERC721_RINKEBY
+  case ETH_ROPSTEN
+  case ERC20_ROPSTEN
+  case ETH_GOERLI
+  case ERC20_GOERLI
+  case FLR_COSTON
+  case FLR20_COSTON
+  case XDC_APOTHEM
+  case XRC20_APOTHEM
+  case BSC_TESTNET
+  case BEP20_TESTNET
+  case CARDANO_TESTNET
+  case POLYGON_TESTNET
+  case POLY_ERC20_TEST
+  case EVMT
+  case E20T
+  case HEDERA_TESTNET
+  case HTS_TESTNET
+  case STACKS_TESTNET
+  case XRP_TA_TESTNET
+  case SIP010_TESTNET
+  case XLM_TA_TESTNET
+  case NEAR_TESTNET
+  case TEZOS_TESTNET
+  case XTZ_FA_TESTNET
+  case HAVAH_TESTNET
+  case HSP20_TESTNET
+  case NOT_SUPPORTED
+  public init(from decoder: Swift.Decoder) throws
+  public static func getCzoneGroup(coinType: Swift.String) throws -> DcentBiometric.CoinType
+  public static func existCoinGroup(coinGroup: Swift.String) -> Swift.Bool
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CoinTypeProperties {
+  public let name: Swift.String?
+  public let isTestNet: Swift.Bool?
+  public let isToken: Swift.Bool?
+}
+extension DcentBiometric.CoinType {
+  public var id: DcentBiometric.CoinType {
+    get
+  }
+  public var properties: DcentBiometric.CoinTypeProperties {
+    get
+  }
+}
+public class DeviceInfo {
+  public var deviceID: Swift.String
+  public var label: Swift.String
+  public var fwVersion: Swift.String
+  public var ksmVersion: Swift.String
+  public var state: Swift.String
+  public var coinList: [Swift.String]
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class VechainTransaction : DcentBiometric.UnionTransaction {
+  override public init(sigHash: Swift.String?, key: Swift.String?, fee: Swift.String?, nonce: Swift.String? = nil, decimals: Swift.UInt32?, symbol: Swift.String?, optionParam: Swift.String?)
+  @objc deinit
+}
+public class XrpTransaction {
+  public var addressPath: Swift.String
+  public var sourceAddress: Swift.String
+  public var destinationAddress: Swift.String
+  public var amount: Swift.UInt64
+  public var fee: Swift.UInt64
+  public var sequence: Swift.UInt32
+  public var destinationTag: Swift.UInt64
+  public init(addressPath: Swift.String, sourceAddress: Swift.String, destinationAddress: Swift.String, amount: Swift.UInt64, fee: Swift.UInt64, sequence: Swift.UInt32, destinationTag: Swift.UInt64)
+  @objc deinit
+}
+public class StacksTransaction {
+  public var key: Swift.String?
+  public var sigHash: Swift.String?
+  public var authType: Swift.UInt32?
+  public var fee: Swift.String?
+  public var nonce: Swift.String?
+  public var symbol: Swift.String?
+  public var decimals: Swift.UInt32?
+  public var optionParam: Swift.String?
+  public init(key: Swift.String?, sigHash: Swift.String?, authType: Swift.UInt32?, fee: Swift.String?, nonce: Swift.String?, symbol: Swift.String?, decimals: Swift.UInt32?, optionParam: Swift.String?)
+  @objc deinit
+}
+public class KlaytnTransaction {
+  public var addressPath: Swift.String
+  public var nonce: Swift.String
+  public var to: Swift.String
+  public var amount: Swift.String
+  public var gasLimit: Swift.String
+  public var gasPrice: Swift.String
+  public var data: Swift.String
+  public var chainId: Swift.String
+  public var fromAddr: Swift.String
+  public var tx_type: Swift.UInt8
+  public var fee_ratio: Swift.UInt32
+  public init(addressPath: Swift.String, nonce: Swift.String, to: Swift.String, amount: Swift.String, gasLimit: Swift.String, gasPrice: Swift.String, data: Swift.String, chainId: Swift.UInt32, from: Swift.String? = nil, tx_type: Swift.UInt8? = nil, fee_ratio: Swift.UInt32? = nil)
+  @objc deinit
+}
+public class KlaytnTokenTransaction : DcentBiometric.KlaytnTransaction {
+  public var tokenName: Swift.String
+  public var decimals: Swift.UInt32
+  public var tokenSymbol: Swift.String
+  public init(addressPath: Swift.String, nonce: Swift.String, to: Swift.String, amount: Swift.String, gasLimit: Swift.String, gasPrice: Swift.String, data: Swift.String, chainId: Swift.UInt32, tokenName: Swift.String, decimals: Swift.UInt32, tokenSymbol: Swift.String, from: Swift.String? = nil, tx_type: Swift.UInt8? = nil, fee_ratio: Swift.UInt32? = nil)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class BleDeviceInfo : ObjectiveC.NSObject {
+  public var deviceId: Swift.String
+  public var peripheral: CoreBluetooth.CBPeripheral!
+  public var deviceName: Swift.String {
+    get
+  }
+  public var isReadyToCommunication: Swift.Bool {
+    get
+  }
+  public var isManualDisconnect: Swift.Bool
+  @objc deinit
+}
+extension DcentBiometric.BleDeviceInfo : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheralDidUpdateName(_ peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func peripheralIsReady(toSendWriteWithoutResponse peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didReadRSSI RSSI: Foundation.NSNumber, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didModifyServices invalidatedServices: [CoreBluetooth.CBService])
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor descriptor: CoreBluetooth.CBDescriptor, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+}
+public class HederaTransaction {
+  public var unsigned: Swift.String?
+  public var key: Swift.String?
+  public var symbol: Swift.String?
+  public var decimals: Swift.String?
+  public init(unsigned: Swift.String?, key: Swift.String?, symbol: Swift.String?, decimals: Swift.String?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class PolkadotTransaction : DcentBiometric.UnionTransaction {
+  override public init(sigHash: Swift.String?, key: Swift.String?, fee: Swift.String?, nonce: Swift.String? = nil, decimals: Swift.UInt32?, symbol: Swift.String?, optionParam: Swift.String?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class TezosTransaction : DcentBiometric.UnionTransaction {
+  override public init(sigHash: Swift.String?, key: Swift.String?, fee: Swift.String?, nonce: Swift.String? = nil, decimals: Swift.UInt32?, symbol: Swift.String?, optionParam: Swift.String?)
+  @objc deinit
+}
+public class StellarTransaction {
+  public var txXDR: Swift.String?
+  public var key: Swift.String?
+  public init(txXDR: Swift.String?, key: Swift.String?)
+  @objc deinit
+}
+public struct PacketBase {
+}
+extension DcentBiometric.KlaytnType : Swift.Equatable {}
+extension DcentBiometric.KlaytnType : Swift.Hashable {}
+extension DcentBiometric.KlaytnType : Swift.RawRepresentable {}
+extension DcentBiometric.BtcTxtype : Swift.Equatable {}
+extension DcentBiometric.BtcTxtype : Swift.Hashable {}
+extension DcentBiometric.BtcTxtype : Swift.RawRepresentable {}
+extension DcentBiometric.DcentBleManagerState : Swift.Equatable {}
+extension DcentBiometric.DcentBleManagerState : Swift.Hashable {}
+extension DcentBiometric.DcentBleManagerState : Swift.RawRepresentable {}
+extension DcentBiometric.ErrorInGeneral : Swift.Equatable {}
+extension DcentBiometric.ErrorInGeneral : Swift.Hashable {}
+extension DcentBiometric.ErrorInGeneral : Swift.RawRepresentable {}
+extension DcentBiometric.CoinType : Swift.Equatable {}
+extension DcentBiometric.CoinType : Swift.Hashable {}
+extension DcentBiometric.CoinType : Swift.RawRepresentable {}
