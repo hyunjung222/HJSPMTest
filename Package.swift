@@ -12,5 +12,8 @@ let package = Package(
     dependencies: [],
     targets: [
         .binaryTarget(name: "DcentBiometricTest", path: "DcentBiometric.xcframework")
+         .target(name: "DcentBiometricFrameworkBundle",
+            dependencies: [ .target(name: "DcentBiometricTest")],
+            path: "DcentBiometricFrameworkBundle")
     ]
 )
