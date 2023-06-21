@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "DcentBiometricTest",
+    name: "DcentBiometric",
     platforms: [
         .iOS(.v12),
     ],
     products: [
-        .library(name: "DcentBiometricTest", targets:["DcentBiometric"]),
+        .library(name: "DcentBiometric", targets:["DcentBiometric"]),
     ],
     dependencies: [
         .package(name: "SwiftProtobuf", url: "https://github.com/apple/swift-protobuf.git", from: "1.6.0"),
@@ -15,13 +15,10 @@ let package = Package(
         .package(name: "BigInt", url: "https://github.com/attaswift/BigInt.git", from: "5.3.0")
     ],
     targets: [
-        .binaryTarget(name: "DcentBiometricTest", path: "DcentBiometric.xcframework")
+        .binaryTarget(name: "DcentBiometric", path: "DcentBiometric.xcframework")
          .target(name: "DcentBiometricFrameworkBundle",
             dependencies: [ .target(name: "DcentBiometricTest"), "SwiftProtobuf", "XCGLogger", "BigInt"],
             path: "DcentBiometricFrameworkBundle")
-        .target(
-          name: "MyTarget",
-          dependencies: [.product(name: "SwiftProtobuf", package: "swift-protobuf")]
         ),
     ]
 )
