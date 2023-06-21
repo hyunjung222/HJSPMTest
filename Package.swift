@@ -19,6 +19,5 @@ let package = Package(
          .target(name: "DcentBiometricFrameworkBundle",
             dependencies: [ .target(name: "DcentBiometricTest"), "SwiftProtobuf", "XCGLogger", "BigInt"],
             path: "DcentBiometricFrameworkBundle")
-        ),
     ]
 )
