@@ -11,7 +11,6 @@ import Foundation
 import Swift
 import SwiftProtobuf
 import UIKit
-import XCGLogger
 import _Concurrency
 import _StringProcessing
 public class UnionTransaction {
@@ -263,7 +262,6 @@ public class TokenTransaction : DcentBiometric.EthereumTransaction {
   public init(addressPath: Swift.String, nonce: Swift.String, to: Swift.String, amount: Swift.String, gasLimit: Swift.String, gasPrice: Swift.String, data: Swift.String = "", symbol: Swift.String? = nil, tokenName: Swift.String, contractAddress: Swift.String, decimals: Swift.String, tokenSymbol: Swift.String)
   @objc deinit
 }
-public let logger: XCGLogger.XCGLogger
 public typealias GeneralResultHandler = (_ result: Swift.Bool) -> Swift.Void
 public typealias GetAccountInfoHandler = (_ result: Swift.Bool, _ accountInfos: [DcentBiometric.Account]) -> Swift.Void
 public typealias StringValueHandler = (_ result: Swift.Bool, _ value: Swift.String) -> Swift.Void
