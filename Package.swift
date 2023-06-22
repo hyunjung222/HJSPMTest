@@ -7,7 +7,7 @@ let package = Package(
         .iOS(.v12),
     ],
     products: [
-        .library(name: "DcentBiometric", targets:["DcentBiometric"]),
+        .library(name: "DcentBiometric", targets:["DcentBiometricFrameworkBundle"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.6.0"),
