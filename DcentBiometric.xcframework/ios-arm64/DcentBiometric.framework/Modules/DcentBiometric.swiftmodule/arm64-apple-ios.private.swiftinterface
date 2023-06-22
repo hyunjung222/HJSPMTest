@@ -8,9 +8,7 @@ import CommonCrypto.CommonCryptor
 import CoreBluetooth
 @_exported import DcentBiometric
 import Foundation
-import RLPSwift
 import Swift
-import SwiftDate
 import SwiftProtobuf
 import UIKit
 import XCGLogger
