@@ -18,7 +18,7 @@ let package = Package(
         //        Target
         .binaryTarget(name: "DcentBiometric", path: "DcentBiometric.xcframework"),
         .target(name: "DcentBiometricFrameworkBundle",
-                dependencies: [ .target(name: "DcentBiometric"), .product(name: "SwiftProtobuf", package: "swift-protobuf"), .product(name: "XCGLogger", package: "XCGLogger"), .product(name: "BigInt", package: "BigInt")],
+                dependencies: [ .target(name: "DcentBiometric"), .product(name: "SwiftProtobuf", package: "swift-protobuf"), .product(name: "XCGLogger", package: "XCGLogger"), .product(name: "BigInt", package: "BigInt"), .product(name: "ObjcExceptionBridging", package: "XCGLogger")],
                 path: "DcentBiometricFrameworkBundle")
          
     ]
