@@ -21,7 +21,7 @@ let package = Package(
 //                dependencies: [ .target(name: "DcentBiometric"), .product(name: "SwiftProtobuf", package: "swift-protobuf"), /*.product(name: "XCGLogger", package: "XCGLogger"),*/ .product(name: "BigInt", package: "BigInt")],
 //                path: "DcentBiometricFrameworkBundle")
         .target(name: "DcentBiometricFrameworkBundle",
-            dependencies: [ .target(name: "DcentBiometric"), "swift-protobuf", "BigInt"],
+            dependencies: [ .target(name: "DcentBiometric"), "SwiftProtobuf", "BigInt"],
             path: "DcentBiometricFrameworkBundle")
          
     ]
