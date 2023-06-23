@@ -5657,7 +5657,10 @@
         "name": "SwiftProtobuf",
         "printedName": "SwiftProtobuf",
         "declKind": "Import",
-        "moduleName": "DcentBiometric"
+        "moduleName": "DcentBiometric",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
@@ -32584,105 +32587,105 @@
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 4437,
+      "offset": 4458,
       "length": 5,
       "value": "\"eos\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 4648,
+      "offset": 4669,
       "length": 30,
       "value": "\".transaction_req_parameter_t\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 4742,
+      "offset": 4763,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 4762,
+      "offset": 4783,
       "length": 13,
       "value": "\"unsigned_tx\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 4782,
+      "offset": 4803,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 4803,
+      "offset": 4824,
       "length": 10,
       "value": "\"key_path\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 6417,
+      "offset": 6438,
       "length": 30,
       "value": "\".transaction_res_parameter_t\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 6511,
+      "offset": 6532,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 6527,
+      "offset": 6548,
       "length": 11,
       "value": "\"signature\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 7851,
+      "offset": 7872,
       "length": 29,
       "value": "\".get_pubkey_req_parameter_t\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 7944,
+      "offset": 7965,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 7964,
+      "offset": 7985,
       "length": 10,
       "value": "\"key_path\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 9275,
+      "offset": 9296,
       "length": 29,
       "value": "\".get_pubkey_res_parameter_t\""
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 9368,
+      "offset": 9389,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/musicgi\/Work\/hjkim\/SPMTest\/DcentBiometric\/DcentBiometric\/DcentBiometric\/Protobuf\/eos.pb.swift",
       "kind": "StringLiteral",
-      "offset": 9384,
+      "offset": 9405,
       "length": 8,
       "value": "\"pubkey\""
     },

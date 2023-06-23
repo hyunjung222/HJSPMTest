@@ -8,7 +8,6 @@ import CoreBluetooth
 @_exported import DcentBiometric
 import Foundation
 import Swift
-import SwiftProtobuf
 import UIKit
 import _Concurrency
 import _StringProcessing
