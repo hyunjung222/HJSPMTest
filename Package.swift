@@ -19,7 +19,7 @@ let package = Package(
         .binaryTarget(name: "DcentBiometric", path: "DcentBiometric.xcframework"),
         .target(name: "DcentBiometricFrameworkBundle",
                 dependencies: [ .target(name: "DcentBiometric"), .product(name: "SwiftProtobuf", package: "swift-protobuf"), /*.product(name: "XCGLogger", package: "XCGLogger"),*/ .product(name: "BigInt", package: "BigInt")],
-                path: "DcentBiometricFrameworkBundle")
+                path: "DcentBiometricFrameworkBundle", publicHeadersPath: "include")
 //        .target(name: "DcentBiometricFrameworkBundle",
 //            dependencies: [ .target(name: "DcentBiometric")],
 //            path: "DcentBiometricFrameworkBundle")
