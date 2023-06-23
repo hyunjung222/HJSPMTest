@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		vSkduwnnmI7MlTpftekJzjyCBwE=
+		9b5bSDziE262HXHe8COmQZZofCc=
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		NLkX077w0bd7z9buaXucVkzSGzQ=
+		4jYErm8pWZAYyyP/3A48x3KD8N0=
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		NLkX077w0bd7z9buaXucVkzSGzQ=
+		4jYErm8pWZAYyyP/3A48x3KD8N0=
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8i7zybYpUrOcGGcB0JuSXcdGdeM=
+		6n6LGdN6DOJGCupMf4pVN+S4Dn0=
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		vSkduwnnmI7MlTpftekJzjyCBwE=
+		9b5bSDziE262HXHe8COmQZZofCc=
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tetIfrBDg956Li742VNmFztsjg0=
+		x6HJiFB6VWe98C+vRmCgPdh7bDE=
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tetIfrBDg956Li742VNmFztsjg0=
+		x6HJiFB6VWe98C+vRmCgPdh7bDE=
 		</data>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8Y/vCUdM+UtOBjlGG+eYAI06Zsc=
+		M/SvihgKdRQYfw4m8QVqVaQ74Dc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y4wRGHL/bpnhk2DXvAsVIEYbGLEI79aYCyGLQZn9Odk=
+			p8qU3u16iWw3kpBJHWV0eg4K43UEX/Nedr3aBt5ojF0=
 			</data>
 		</dict>
 		<key>Modules/DcentBiometric.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZDrskWZiPcU4Qw/PTT5kQV3aE0bhMLbVbuhycnSizlE=
+			XUgK1XrKktMIHhsxFPOrdg+x5DIEBdZlS0zujugAuSw=
 			</data>
 		</dict>
 		<key>Modules/DcentBiometric.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZDrskWZiPcU4Qw/PTT5kQV3aE0bhMLbVbuhycnSizlE=
+			XUgK1XrKktMIHhsxFPOrdg+x5DIEBdZlS0zujugAuSw=
 			</data>
 		</dict>
 		<key>Modules/DcentBiometric.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3RR9lvnaMnyYEVSRuIC8ANOxAsT/WJ2Q3y1zbhrGyhA=
+			SXS4bfDWMTR71Wd8kJiCiG1RoVXPMRCYFu1V8iFiVW4=
 			</data>
 		</dict>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y4wRGHL/bpnhk2DXvAsVIEYbGLEI79aYCyGLQZn9Odk=
+			p8qU3u16iWw3kpBJHWV0eg4K43UEX/Nedr3aBt5ojF0=
 			</data>
 		</dict>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ou93kB9qJ2RtAWl0BsFvQ+BdPj8tu4KNYNWmCPE3kiQ=
+			Tn8QVGEUsCHHu3G/MgBzGPfDJYbKB92+vq7bqKM70dE=
 			</data>
 		</dict>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ou93kB9qJ2RtAWl0BsFvQ+BdPj8tu4KNYNWmCPE3kiQ=
+			Tn8QVGEUsCHHu3G/MgBzGPfDJYbKB92+vq7bqKM70dE=
 			</data>
 		</dict>
 		<key>Modules/DcentBiometric.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dn98322sAVcwpvidgcBOGG5J0L4SQ39wx25bk6OKUEE=
+			r8lYr9IyolLfBECPC4PajVr+XiS1OWluriNd0O1ykzU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
